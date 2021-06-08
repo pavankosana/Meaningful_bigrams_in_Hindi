@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Meaningful Bigram Tagger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Charm|Cookie|Caladea">
+    <style>
+        body{
+            background-color: rgb(120, 75, 123);
+            font-family: "Arvo", "Arvo", monospace;
+        }
+        h1{
+            font-family: "Arvo", sans-serif;
+            text-align: center;
+        }
+        p, ul{
+            font-family: "Arvo", sans-serif;
+            text-align: left;
+            padding-left: 10%;
+            font-size: larger;
+        }
+        textarea {
+            width: 80%;
+            height: 150px;
+            align-self: center;
+            padding: 20px 20px;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            border-radius: 20px;
+            background-color: #f8f8f8;
+            resize: none;
+            text-align: left; 
+            outline: none;           
+        }
+        
+        textarea:hover {
+            box-shadow: 5px 5px 4px #b98f3b;
+            }
+            input[type=submit]:hover {
+            box-shadow: 3px 2px 2px #b98f3b;
+            }
+        #about{
+            text-align: left;
+            margin-left: -150px;
+        }
+        input[type=submit]{
+            font-family: 'Cookie';
+            text-align: left;
+            font-size: larger;            
+            border-radius: 10px;
+            outline: none;
+        }
+        div
+            {
+            font-family: "Arvo", sans-serif;
+            text-align: left;
+            font-size: medium;
+        }
+        .output{
+            text-align: left;
+            font-size: large;
+        }
+        
+    </style>    
+</head>
+<body>
+<h1 id="center">Meaningful bigrams</h1>
+
+<form action="/pos_tag" method="post">
+    <p ><textarea id="text" name="text" rows="12" cols="100">
+        Enter the text to be tagged here...
+    </textarea></p>
+    <p><input type="submit" value="Find Meaningful Bigrams"></p>
+</form>
+<div>
+    <p><b>Input text:</b></p>
+    <p class="output">
+        {{data}}
+    </p>
+    <p><b>Generated PoS tags:</b></p>
+    <p class="output">
+        {{response}}
+    </p>
+</div>
+</body>
+</html>
